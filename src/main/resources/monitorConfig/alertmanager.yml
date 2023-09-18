@@ -1,0 +1,15 @@
+route:
+  group_by:
+    - Alertname
+  group_interval: 30s
+  repeat_interval: 30s
+  receiver: email-me
+receivers:
+  - name: email-me
+    email_configs:
+      - send_resolved: true
+        to: 'aswathy.bs1211@gmail.com'
+        from: 'achu.aswathy11@gmail.com'
+        smarthost: 'smtp.gmail.com:587'
+        auth_username: "achu.aswathy11@gmail.com"
+        auth_password: "password"
